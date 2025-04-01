@@ -1,11 +1,15 @@
-export default function fibonacci(n) {
-    if (n <= 0) {
+export default function fibonacci(number) {
+    // base case
+    if(number === 0) {
         return 0;
     }
-    else if (n === 1){
-        return 1;
-    }else{
-        console.log(`Print ${n}`);
+
+    if(number === 1) {
+        return 1
     }
+
+    // fibonacci(3) = fibonacci(2) + fibonacci(1)
+    return fibonacci(number - 1) + fibonacci(number - 2)
 }
+
 
